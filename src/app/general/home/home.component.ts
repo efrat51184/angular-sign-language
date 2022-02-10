@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 b:boolean=false;
 ass:boolean=true;
+NumWord:boolean;
+
 // flag:boolean=false;
   constructor(private _router:Router) { }
   // @Input()
@@ -26,5 +28,17 @@ ass:boolean=true;
   a(page:string)
   {
     this._router.navigate([page]);
+  }
+  changeNumWord(s:string)
+  {
+if(s=="Letters")
+{
+this.NumWord=true;
+this._router.navigate(["sign"]);
+}
+else
+{
+this.NumWord=false;
+this._router.navigate(["sign"]);}
   }
 }

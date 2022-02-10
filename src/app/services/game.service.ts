@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { Card } from '../card';
 import { tap, map, delay } from "rxjs/operators";
 import { BehaviorSubject } from 'rxjs';
+import { Card } from '../card';
 
 @Injectable({
   providedIn: 'root'

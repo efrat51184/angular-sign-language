@@ -1,10 +1,10 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 //import { EventEmitter } from 'stream';
-import { LoginService } from '../../services/login.service';
 import { EventEmitter } from '@angular/core';
 import { User } from 'src/models/user';
 import { UserDto } from 'src/models/UserDto';
+import { LoginService } from '../../services/login.service';
 
 
 @Component({

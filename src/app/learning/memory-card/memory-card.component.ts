@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, DoCheck } from '@angular/core';
-import { GameService } from '../services/game.service';
 import { delay } from 'rxjs/operators';
+import { GameService } from 'src/app/services/game.service';
 
 
 @Component({
@@ -13,9 +13,9 @@ export class MemoryCardComponent implements OnInit, DoCheck {
   constructor(private gameService: GameService) { }
 
 
-  @Input() type: string;
-  @Input() code: string;
-  @Input() id: number;
+  @Input() type!: string;
+  @Input() code!: string;
+  @Input() id!: number;
 
   icon = [this.type, this.code];
   isRotated: boolean;

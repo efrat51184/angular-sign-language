@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { icons } from "../app/icons";
+import { icons } from "./icons";
 
 
 @Component({
@@ -12,7 +12,6 @@ import { icons } from "../app/icons";
 export class AppComponent {
   title = 'memory-game';
 
-  NumWord:boolean;
   enterToTheSite:Boolean;
   GetChildData(data){
     debugger
@@ -30,16 +29,5 @@ console.log(data);
   {
     this._router.navigate([page]);
   }
-  changeNumWord(s:string)
-  {
-if(s=="Letters")
-{
-this.NumWord=true;
-this._router.navigate(["sign"]);
-}
-else
-{
-this.NumWord=false;
-this._router.navigate(["sign"]);}
-  }
+
 }

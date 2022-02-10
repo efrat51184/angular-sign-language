@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body >
+
+
+  <!-- https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_navbar -->
+  <br>
+  <br>
+  <div  > 
+    <ul class="row"  >
+        <li><a (click)="a('home')">Home</a></li>
+        <li><a (click)="a('about')">About</a></li>
+        <li><a (click)="a('instructions')">Instructions </a></li>
+        <li><a (click)="a('Private Area')">Private Area </a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Numbers</a>
+          <ul class="dropdown-content">
+           <a (click)="a('board')">practice</a>
+             <a (click)="changeNumWord('Numbers')">study</a>
+            <a (click)="a('board')">test</a>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Letters</a>
+          <ul class="dropdown-content">
+           <a (click)="a('board')">practice</a>
+             <a (click)="changeNumWord('Letters')">study</a>
+            <a (click)="a('board')">test</a>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <router-outlet></router-outlet>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/css/tryit.asp?filename=trycss_ex_pagination_active by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Apr 2017 08:24:17 GMT -->
+</html>

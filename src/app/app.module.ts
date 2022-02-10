@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BoardComponent } from './board/board.component';
-import { MemoryCardComponent } from './memory-card/memory-card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatRadioModule } from "@angular/material/radio";
 import { FormsModule } from '@angular/forms';
@@ -14,19 +12,23 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+// import { HomeComponent } from './general/home/home.component';
+import { Route,RouterModule } from '@angular/router';
+import { AboutComponent } from './general/about/about.component';
+import { SignComponent } from './sign/sign.component';
+import { BoardComponent } from './learning/board/board.component';
+import { MemoryCardComponent } from './learning/memory-card/memory-card.component';
 import { LoginComponent } from './logon/login/login.component';
 import { RegisterComponent } from './logon/register/register.component';
-import { HomeComponent } from './home/home.component';
-import { Route,RouterModule } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { SignComponent } from './sign/sign.component';
-import { LoginService } from './services/login.service';
+import { LogonModule } from './logon/logon.module';
+import { GeneralModule } from './general/general.module';
+
 const APP_ROOT:Route[]=[
   {path:"",pathMatch:"full", redirectTo:"login"},
-  {path:"home", component:HomeComponent},
+  // {path:"home", component:HomeComponent},
   {path:"sign",component:SignComponent},
-  {path:"register", component:RegisterComponent},
-  {path:"login", component:LoginComponent},
+  // {path:"register", component:RegisterComponent},
+  // {path:"login", component:LoginComponent},
   {path:"about", component:AboutComponent},
   {path:"board", component:BoardComponent}]
 @NgModule({
@@ -35,7 +37,9 @@ const APP_ROOT:Route[]=[
     BoardComponent,
     MemoryCardComponent,
     NavbarComponent,
-    HomeComponent,
+    // LoginComponent,
+    // RegisterComponent,
+    // HomeComponent,
     AboutComponent,
     SignComponent
   ],
@@ -51,7 +55,8 @@ const APP_ROOT:Route[]=[
     MatButtonModule,
     MatDividerModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    LogonModule,GeneralModule
   ],
   providers: [],
   bootstrap: [AppComponent]

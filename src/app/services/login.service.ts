@@ -15,9 +15,6 @@ export class LoginService {
 
   }
 
-
- 
-u:User=new User(1,"cc","ff","ff","ff",4,4,"ff")
   getUser(user:UserDto): Observable<User>
   {
  
