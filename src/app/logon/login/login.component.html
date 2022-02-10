@@ -1,0 +1,25 @@
+<!-- <app-root [enterToTheSite]="enterToTheSite"></app-root> -->
+<!-- {{enterToTheSite}} -->
+<!-- <div style="margin:660px;"> -->
+<form class="text-center border border-light p-5" style="width: 500px; margin:660px; border: 10px; border-top: coral;  ">
+
+  <p class="h4 mb-4"  >login</p>
+  <button (click)="loginNavigate('home')"  style="background-color: white; border: white; color: blue;text-decoration: underline;">For entry without registration</button>
+ 
+  <!-- Name -->
+  <input #password type="text" id="defaultSubscriptionFormPassword" class="form-control mb-4" placeholder="Password">
+
+  <!-- Email -->
+  <input #email type="email" id="defaultSubscriptionFormEmail" class="form-control mb-4" placeholder="E-mail">
+ 
+ 
+
+  <!-- Sign in button -->  
+
+  <button (click)="signin(email.value,password.value)" mdbBtn color="info" block="true" type="submit" class="form-control mb-4" style=" margin: 25px 50px 75px 100px;background-color: cornflowerblue;" >Sign in</button>
+  
+  <button (click)="loginNavigate('register')" style="background-color: white; border: white; color: blue;text-decoration: underline;">Don't have an account yet? register>></button>
+</form>
+<!-- </div> -->
+<!-- Default form subscription -->
+

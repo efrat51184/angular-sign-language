@@ -1,0 +1,30 @@
+<!-- {{enterToTheSite}} -->
+<div *ngIf="enterToTheSite" > 
+  
+  
+<ul class="row"  >
+    <li><a (click)="a('home')">Home</a></li>
+    <li><a (click)="a('about')">About</a></li>
+    <li><a (click)="a('instructions')">Instructions </a></li>
+
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Numbers</a>
+      <ul class="dropdown-content">
+       <a (click)="a('board')">practice</a>
+         <a (click)="changeNumWord('Numbers')">study</a>
+        <a (click)="a('board')">test</a>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Letters</a>
+      <ul class="dropdown-content">
+       <a (click)="a('board')">practice</a>
+         <a (click)="changeNumWord('Letters')">study</a>
+        <a (click)="a('board')">test</a>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>
+<app-sign [flag]="NumWord"></app-sign>
